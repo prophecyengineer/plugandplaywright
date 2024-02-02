@@ -1,64 +1,45 @@
-# Introduction
+import { TabsBasic } from "../src/components/Tabs/TabsBasic";
 
-Step into the realm of testing with a twist, where ForePlaywright spices up your automation game. It's a journey filled with cheeky challenges, slick solutions, and a wink 😉 at the complexities of web testing. Ready for a flirtatious dance with your code? Let's dive into a world where efficiency meets playfulness, and discover the secret to making testing not just productive, but provocatively fun! 🍑💋 Ready to turn up the heat on your testing routine?
+# Installation 🔌
 
----
+Embark on a seamless testing journey with `PlugAndPlaywright`. Envision a world where every test is a direct connection to success, where code flows like electricity through circuits, energizing your automation tasks with precision and ease.
 
-## The Problem
+Are you ready to harness the power of Playwright and infuse it with the simplicity of plug-and-play? Let's gear up for an automation experience that's both electrifying and smooth.
 
-Have you found yourself bogged down by the complexity of writing and maintaining tests in Playwright? The intricacies can often overshadow the goal of quick and efficient testing.
+## 🚀 Quick Setup
 
----
+<TabsBasic
+Tab1Label="npm" Tab1Content={`npm i plugandplaywright`}
+Tab2Label="yarn" Tab2Content={`yarn add plugandplaywright`}
+Tab3Label="pnpm" Tab3Content={`pnpm add plugandplaywright`}/>
 
-## The Solution
+Make sure your environment is charged with Playwright:
 
-Welcome to ForePlaywright, a pioneering library designed to streamline your Playwright testing experience. Our tool simplifies the process, focusing on enhancing productivity and ensuring your tests are both powerful and time-efficient.
+<TabsBasic
+Tab1Label="npm" Tab1Content={`npm init playwright@latest`}
+Tab2Label="yarn" Tab2Content={`yarn create playwright`}
+Tab3Label="pnpm" Tab3Content={`pnpm create playwright`}/>
 
----
+# 🎭 Basic Connections
 
-## Installation
+`PlugAndPlaywright` powers up your testing framework with intuitive commands like getText, getHeading, and clickLink, enabling you to navigate and interact with your web pages as smoothly as plugging into an outlet.
 
-### Playwright Installation
+```jsx
+import { test, expect } from "@playwright/test";
+import { getText, getHeading, clickLink } from "plugandplaywright";
 
-- **npm**: `npm init playwright@latest`
-- **yarn**: `yarn create playwright`
-- **pnpm**: `pnpm create playwright`
+test("Connect with the DOM", async ({ page }) => {
+  await page.goto("https://your-target-website.com/");
 
-### ForePlaywright Installation
+  // Engage with your elements effortlessly
+  await getText(page, "Element detected");
+  await getHeading(page, "Welcome, user");
+  await clickLink(page, "Proceed to the next page");
+});
+```
 
-- **npm**: `npm i foreplaywright`
-- **yarn**: `yarn add foreplaywright`
-- **pnpm**: `add foreplaywright`
+## 💡 Advanced Integration
 
----
+Elevate your testing with the comprehensive capabilities of PlugAndPlaywright. Our documentation is the perfect toolkit to mastering the craft of seamless automation.
 
-## Suppressing Warnings
-
-React DOM 16.8 got you seeing warnings? We've got a solution to silence them.
-
----
-
-## Examples
-
-Discover how to leverage `foreplaywright` with basic and complex examples.
-
----
-
-## Guiding Principles
-
-Our mantra: The closer your tests resemble real use cases, the more confidence they bring.
-
----
-
-## Docs & Issues
-
-- **Docs**: Dive into our comprehensive documentation for detailed guides and tips.
-- **Issues**: Facing bugs? Have feature requests or questions? We're here to help!
-
----
-
-## Contributors & LICENSE
-
-Join our community of contributors and explore the licensing details.
-
-Feel the thrill of testing with real-world scenarios, minimize the brittle nature of your test suite, and let's make testing a breeze together. Let the adventure begin!
+Step into the world of PlugAndPlaywright, where every line of code ensures a perfect fit with your applications, guaranteeing that your testing is as effective as it is straightforward. Are you prepared to experience the ultimate in plug-and-play efficiency?

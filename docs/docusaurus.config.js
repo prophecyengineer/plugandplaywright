@@ -6,14 +6,14 @@ const config = {
     tagline: 'Simpler, sexier testing with Playwright. Easily memorised and maintained. ',
     favicon: 'img/logo.png',
     // Set the production url of your site here
-    url: 'https://foreplaywright.com',
+    url: 'https://plugandplaywright.com',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'foreplaywright', // Usually your GitHub org/user name.
-    projectName: 'foreplaywright', // Usually your repo name.
+    organizationName: 'plugandplaywright', // Usually your GitHub org/user name.
+    projectName: 'plugandplaywright', // Usually your repo name.
     onBrokenLinks: 'ignore',
     onBrokenMarkdownLinks: 'ignore',
     // Even if you don't use internationalization, you can use this field to set
@@ -52,7 +52,7 @@ const config = {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: 'foreplaywright',
+            title: 'plugandplaywright',
             logo: {
                 alt: 'My Site Logo',
                 src: 'img/logo.png',
@@ -62,9 +62,9 @@ const config = {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
                     position: 'left',
-                    label: 'Get Started 🥵',
+                    label: 'Get Started 🔌',
                 },
-                { to: '/docs/getting-started/installation', label: 'Installation 🌶️', position: 'left' },
+                { to: '/docs/getting-started/installation', label: 'Installation 🔌', position: 'left' },
                 {
                     href: 'https://github.com/lottie-logic/foreplaywright.com',
                     label: 'GitHub',

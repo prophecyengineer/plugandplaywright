@@ -3,20 +3,20 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Welcome to the ForePlaywright Sensation!',
-  tagline: 'Simpler, sexier testing with Playwright. Easily memorised and maintained. ',
+title: 'Electrify Your Testing with PlugAndPlaywright!',
+tagline: 'Connect to Clarity: Streamlined Testing for Playwright, where Simplicity Meets Delight.',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
-  url: 'https://foreplaywright.com',
+  url: 'https://plugandplaywright.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'foreplaywright', // Usually your GitHub org/user name.
-  projectName: 'foreplaywright', // Usually your repo name.
+  organizationName: 'plugandplaywright', // Usually your GitHub org/user name.
+  projectName: 'plugandplaywright', // Usually your repo name.
 
   onBrokenLinks: 'ignore',
     onBrokenMarkdownLinks: 'ignore',
@@ -59,7 +59,7 @@ sidebarCollapsed:false,
     // Replace with your project's social card
     image: 'img/logo.png',
     navbar: {
-      title: 'foreplaywright',
+      title: 'plugandplaywright',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.png',
@@ -69,12 +69,12 @@ sidebarCollapsed:false,
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Get Started 🥵',
+          label: 'Get Started',
         },
       
-        {to: '/docs/getting-started/installation', label: 'Installation 🌶️', position: 'left'},
+        {to: '/docs/getting-started/installation', label: 'Installation', position: 'left'},
         {
-          href: 'https://github.com/lottie-logic/foreplaywright.com',
+          href: 'https://github.com/lottie-logic/plugandplaywright',
           label: 'GitHub',
           position: 'right',
         },
@@ -118,7 +118,7 @@ sidebarCollapsed:false,
     //         // },
     //         {
     //           label: 'GitHub',
-    //           href: 'https://github.com/lottie-logic/foreplaywright',
+    //           href: 'https://github.com/lottie-logic/plugandplaywright',
     //         },
     //       ],
     //     },

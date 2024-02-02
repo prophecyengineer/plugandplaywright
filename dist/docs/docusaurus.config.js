@@ -12,8 +12,8 @@ var config = {
     baseUrl: '/',
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'foreplaywright', // Usually your GitHub org/user name.
-    projectName: 'foreplaywright', // Usually your repo name.
+    organizationName: 'plugandplaywright', // Usually your GitHub org/user name.
+    projectName: 'plugandplaywright', // Usually your repo name.
     onBrokenLinks: 'ignore',
     onBrokenMarkdownLinks: 'ignore',
     // Even if you don't use internationalization, you can use this field to set
@@ -52,7 +52,7 @@ var config = {
         // Replace with your project's social card
         image: 'img/logo.png',
         navbar: {
-            title: 'foreplaywright',
+            title: 'plugandplaywright',
             logo: {
                 alt: 'My Site Logo',
                 src: 'img/logo.png',

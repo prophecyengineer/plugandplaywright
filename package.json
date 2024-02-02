@@ -1,5 +1,5 @@
 {
-  "name": "foreplaywright",
+  "name": "plugandplaywright",
   "version": "1.0.1",
   "description": "A TypeScript library to simplify Playwright test writing with enhanced utilities.",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lottie-logic/foreplaywright.com"
+    "url": "https://github.com/lottie-logic/plugandplaywright"
   },
   "keywords": [
     "playwright",
@@ -24,9 +24,9 @@
   "author": "Lottie hi.lottie@icloud.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yourusername/foreplaywright/issues"
+    "url": "https://github.com/lottie-logic/plugandplaywright/issues"
   },
-  "homepage": "https://github.com/yourusername/foreplaywright#readme",
+  "homepage": "https://github.com/lottie-logic/plugandplaywright#readme",
   "devDependencies": {
     "typescript": "^4.x",
     "@types/node": "^x.x.x",
