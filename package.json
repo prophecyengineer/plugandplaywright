@@ -1,0 +1,36 @@
+{
+  "name": "foreplaywright",
+  "version": "1.0.0",
+  "description": "A TypeScript library to simplify Playwright test writing with enhanced utilities.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/foreplaywright.git"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "testing",
+    "automation"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/foreplaywright/issues"
+  },
+  "homepage": "https://github.com/yourusername/foreplaywright#readme",
+  "devDependencies": {
+    "typescript": "^4.x",
+    "@types/node": "^x.x.x",
+    "@playwright/test": "^x.x.x"
+  },
+  "peerDependencies": {
+    "playwright": "^x.x.x"
+  }
+}
