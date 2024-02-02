@@ -1,0 +1,63 @@
+
+import { TabsBasic } from "../../src/components/Tabs/TabsBasic";
+
+
+
+
+# Installation 🌶️
+
+Welcome to a titillating journey where testing meets tantalizing twists with `ForePlaywright`. Dive into a world where code caresses and assertions allure, making every test run a seductive dance of efficiency and precision. 
+
+Ready to elevate your Playwright scripts to the realms of ecstasy? Let's set the stage for an automation saga that promises more thrills and less friction.
+
+## 🚀 Quick Setup
+
+<TabsBasic   
+Tab1Label="npm" Tab1Content={`npm i foreplaywright`}
+Tab2Label="yarn" Tab2Content={`yarn add foreplaywright`}
+Tab3Label="pnpm" Tab3Content={`pnpm add foreplaywright`}/>
+
+
+
+Ensure you're already setup with Playwright:
+\
+
+
+<TabsBasic   
+Tab1Label="npm" Tab1Content={`npm init playwright@latest`}
+Tab2Label="yarn" Tab2Content={`yarn create playwright`}
+Tab3Label="pnpm" Tab3Content={`pnpm create playwright`}/>
+
+
+
+# 🎭 Basic Charms
+ForePlaywright enchants your testing framework with spells like getText, getHeading, and clickLink, allowing you to interact with your web pages in a more intuitive and delightful manner.
+
+```jsx
+import { test, expect } from '@playwright/test';
+import { getText, getHeading, clickLink } from 'foreplaywright';
+
+test('Seduce the DOM', async ({ page }) => {
+  await page.goto('https://your-target-website.com/');
+
+  // Whisper sweet nothings to your elements
+  await getText(page, "Find me if you can");
+  await getHeading(page, "Greetings, mortal");
+  await clickLink(page, "Follow me");
+});
+```
+
+
+## 💡 Advanced Teasing
+Unlock the full potential of your testing with advanced ForePlaywright techniques. Our documentation is your guide to mastering the art of playful automation.
+
+
+
+Embark on this bewitching adventure with ForePlaywright, where each line of code not only asserts but also flirts with your application, ensuring that your testing journey is as pleasurable as it is productive. Are you ready to be seduced by efficiency?
+
+```bash
+This introduction encapsulates the essence of `ForePlaywright` in a fun, engaging manner, outlining installation steps, basic usage, and a hint at more advanced features, all wrapped up in a playful tone that's sure to captivate your audience.
+
+```
+
+

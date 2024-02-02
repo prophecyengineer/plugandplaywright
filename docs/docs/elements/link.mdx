@@ -1,0 +1,68 @@
+# Link 
+
+## `getLink`
+
+Description: Retrieves the visible text from a specific element on the page. It's essential for validating that the UI displays the expected text content to users.
+
+
+Example: Pick up the [Link right here]('link') please
+
+```jsx {5}
+import { getLink } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await getLink(page, "Link right here")
+
+}
+```
+
+## `getLinkPartialMatch`
+
+However for times you'd prefer a partial match, we've got you covered.
+
+
+```jsx {5}
+import { getLinkPartialMatch } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await getLinkPartialMatch(page, "Link right")
+
+}
+
+```
+
+
+## `hoverLink`
+
+Example: Hover over the [Link right here]('link') please
+
+
+
+```jsx {5}
+import { hoverLink } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await hoverLink(page, "Link right here")
+
+}
+```
+
+
+## `clickLink`
+
+Example: Click the [Link right here]('link') please
+
+
+
+```jsx {5}
+import { clickLink } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await clickLink(page, "Link right here")
+
+}
+```

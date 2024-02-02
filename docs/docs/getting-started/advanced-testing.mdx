@@ -1,0 +1,77 @@
+# Advanced testing setup 🤓
+
+
+
+This is a way of splitting out the devices from the playwright config, turning them on at off at your will.
+
+
+```jsx  title="tests/utils/devices.tsx"
+export const mobileDevices = [
+// { name: "iPhone 11 Pro", type: "mobile", device: "iOS" },
+{ name: "iPhone 12 Pro Max", type: "mobile", device: "iOS"},
+// { name: "iPhone SE", type: "mobile", device: "iOS" },
+// { name: "Pixel 5", type: "mobile", device: "Android" },
+// { name: "Pixel 4a", type: "mobile", device: "Android" },
+// { name: "Samsung Galaxy S21", type: "mobile", device: "Android" },
+// { name: "Samsung Galaxy S10", type: "mobile", device: "Android" },
+];
+
+export const tabletDevices = [ 
+{ name: "iPad Pro 11", type: "tablet", device: "iOS" },
+// { name: "iPad Mini", type: "tablet", device: "iOS" },
+// { name: "Samsung Galaxy Tab S7", type: "tablet", device: "Android" },
+// { name: "Amazon Fire HD 10", type: "tablet", device: "Android" },
+];
+
+export const desktopDevices = [
+{ name: "Desktop Chrome", type: "desktop", device: "Windows/Mac" },
+// { name: "Desktop Firefox", type: "desktop", device: "Windows/Mac" },
+// { name: "Desktop Safari", type: "desktop", device: "Mac" },
+// { name: "Desktop Edge", type: "desktop", device: "Windows" },
+];
+```
+
+Then, you can use them within a test such as this one. And you can iterate over each device easily, and slip in which tests you want.
+
+
+
+```jsx   title="tests/Homepage/Homepage.spec.ts"
+
+import { test as baseTest, devices, expect } from "@playwright/test";
+import { layoutCheck } from "./tests";
+import { commonAfterEach, commonBeforeEach } from "../utils/commonTests";
+import { desktopDevices, mobileDevices, tabletDevices } from "../utils/devices";
+
+
+const runTestsForDevice = (deviceInfo, testFunctions) => {
+  const deviceConfig = devices[deviceInfo.name];
+    
+  const test = baseTest.extend({ 
+    contextOptions: async ({}, use) => {
+      await use(deviceConfig); 
+    },
+   });
+
+  test.describe(`HomePage tests on ${deviceInfo.name} @${deviceInfo.type}`, () => {
+     test.beforeEach(async ({ page }) => { 
+        await commonBeforeEach(page, "/my-homepage");
+          });
+
+     test.afterEach(async ({ page }) => {
+            await commonAfterEach(page);    
+     });
+
+
+    testFunctions.forEach((testFunction) => {
+        test(testFunction.name, async ({ page }) => {
+          await testFunction(page);
+        });
+     });
+  });
+};
+
+desktopDevices.forEach((device) => runTestsForDevice(device, [layoutCheck]));
+mobileDevices.forEach((device) => runTestsForDevice(device, [layoutCheck]));
+tabletDevices.forEach((device) => runTestsForDevice(device, [layoutCheck]));
+
+```

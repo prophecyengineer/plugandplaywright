@@ -1,0 +1,70 @@
+# Heading 
+
+## `getHeading`
+
+Description: Retrieves the visible text from a specific element on the page. It's essential for validating that the UI displays the expected text content to users.
+
+
+  Example:
+### Pick up the title right here
+
+```jsx {5}
+import { getHeading } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await getHeading(page, "Pick up the title right here")
+
+}
+```
+
+## `getHeadingPartialMatch`
+
+However for times you'd prefer a partial match, we've got you covered.
+
+
+```jsx {5}
+import { getHeadingPartialMatch } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await getHeadingPartialMatch(page, "Pick up the")
+
+}
+
+```
+
+
+## `hoverHeading`
+
+Test: 
+### This cool heading here
+
+
+
+```jsx {5}
+import { hoverHeading } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await hoverHeading(page, "This cool heading here")
+
+}
+```
+
+
+## `clickHeading`
+
+Test: 
+### This Heading.
+
+
+```jsx {5}
+import { clickHeading } from 'foreplaywright'
+
+export async function layoutCheck(page) {
+
+    await clickHeading(page, "This Heading.")
+
+}
+```
