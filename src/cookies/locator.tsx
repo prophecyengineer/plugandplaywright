@@ -6,13 +6,11 @@ export async function checkCookie(
   expectedValue: string
 ) {
   const cookies = await context.cookies();
-
   const cookie = cookies.find((c: any) => c.name === cookieName);
 
   if (cookie) {
     expect(cookie.value).toEqual(expectedValue);
   } else {
-    console.log(`Could
- not find ${cookieName} cookie`);
+    console.log(`Could not find ${cookieName} cookie`);
   }
 }

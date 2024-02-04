@@ -51,7 +51,7 @@ function checkCookie(context, cookieName, expectedValue) {
                         (0, test_1.expect)(cookie.value).toEqual(expectedValue);
                     }
                     else {
-                        console.log("Could\n not find ".concat(cookieName, " cookie"));
+                        console.log("Could not find ".concat(cookieName, " cookie"));
                     }
                     return [2 /*return*/];
             }
