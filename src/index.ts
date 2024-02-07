@@ -1,6 +1,5 @@
 import { checkCookie } from "./cookies/locator";
-import { clickButton } from "./elements/button/click";
-import { getButton, getButtonPartialMatch } from "./elements/button/locator";
+import { getButton, getButtonPartialMatch, clickButton } from "./elements/button";
 import { clickHeading } from "./elements/heading/click";
 import { getHeading,getHeadingPartialMatch, getHeadingLink } from "./elements/heading/locator";
 import { getIdLink } from "./elements/id/locator";
@@ -19,10 +18,7 @@ import { clickTestId, clickTestIdWithText } from "./elements/testId/click";
 import { getElementCountByTestId, checkElementCountByTestIdIsNotMoreThanX, checkElementCountByTestIdIsMoreThanOrEqualToX } from "./elements/testId/count";
 import { fillIdWithText } from "./elements/testId/fill";
 import { getAllTestIdElementsWithText, getTestId, getTestIdElementWithText, getTestIdIsHidden, getTestIdRadioIsChecked, getTestIdRadioNotChecked, getTestIdText, getTestIdWithClass } from "./elements/testId/locator";
-import { clickText, clickTextPartialMatch } from "./elements/text/click";
-import { hoverText,hoverTextPartialMatch } from "./elements/text/hover";
-import { getText, getTextPartialMatch } from "./elements/text/locator";
-import { scrollToThisText } from "./elements/text/scroll";
+import { getText, getTextPartialMatch, hoverText, hoverTextPartialMatch, clickText, clickTextPartialMatch, scrollToText } from "./elements/text";
 import { isTabletScreen, isMobileScreen } from "./screenSize/screenSize";
 import { commonAfterEach } from "./setup/afterEach";
 import { commonBeforeEach, beforeEachAcceptCookies } from "./setup/beforeEach";
@@ -65,7 +61,7 @@ export {
     clickTestId,
     clickTestIdWithText,
     getTestIdWithAttribute,
-    scrollToThisText,
+    scrollToText,
     scrollToThisLink,
     getTestIdIsHidden,
     getTestIdWithClass,
